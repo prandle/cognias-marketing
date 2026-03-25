@@ -5,10 +5,6 @@ export default function Navbar() {
     <header className="w-full border-b border-zinc-800">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         
-        <Link to="/" className="text-lg font-bold">
-          Cognias
-        </Link>
-
         <nav className="flex gap-6 text-sm text-zinc-400">
           <Link to="/features" className="hover:text-white">
             Features
