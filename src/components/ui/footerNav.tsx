@@ -7,13 +7,13 @@ export default function footerNav() {
 
         <nav className="flex gap-6 text-sm text-zinc-400">
           <Link to="/privacy" className="hover:text-white">
-            Features
+            Privacy
           </Link>
           <Link to="/cookies" className="hover:text-white">
-            Pricing
+            Cookies
           </Link>
           <Link to="/terms" className="hover:text-white">
-            About
+            Terms
           </Link>
         </nav>
 
