@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="190px" height="190px" viewBox="0 0 190 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-cognias</title>
+    <g id="Icon-cognias" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(8.000000, 8.000000)" fill-rule="nonzero">
+            <rect id="Rectangle" fill="#111827" x="0" y="0" width="80.9828555" height="80.9828555" rx="6"></rect>
+            <rect id="Rectangle" fill-opacity="0.6" fill="#374151" x="92.9828555" y="0" width="80.9828555" height="80.9828555" rx="6"></rect>
+            <rect id="Rectangle" fill-opacity="0.6" fill="#374151" x="0" y="93.9828555" width="80.9828555" height="80.9828555" rx="6"></rect>
+            <rect id="Rectangle" fill-opacity="0.8" fill="#111827" x="92.9828555" y="93.9828555" width="80.9828555" height="80.9828555" rx="6"></rect>
+        </g>
+    </g>
+</svg>
