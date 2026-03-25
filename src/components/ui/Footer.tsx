@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 // import Navbar from "./NavMenu";
-import {Navbar} from "./index";
+import {FooterNav} from "./index";
 import {config} from "../../lib/constants"
 
 interface FooterProps {
@@ -52,7 +52,7 @@ export function Footer({ version }: FooterProps) {
 
           {/* RIGHT: Footer menu links */}
           
-          <Navbar />
+          <FooterNav />
 
           {/* {footerNav.length > 0 && (
             <div className="flex flex-wrap gap-4 md:justify-end">
