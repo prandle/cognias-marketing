@@ -71,14 +71,14 @@ export function Footer({ version }: FooterProps) {
         </div>
 
         {/* Optional version line below */}
-        {version && (
+        {/* {version && ( */}
           <div className="pt-3 flex items-center gap-2 text-slate-400 text-[11px]">
             <span className="flex items-center gap-1">
               Made with <Heart className="h-3 w-3 text-red-500" /> by Cognias
             </span>
             <span>• Version 1.0.{version}</span>
           </div>
-        )}
+        {/* )} */}
       </div>
     </footer>
   );
