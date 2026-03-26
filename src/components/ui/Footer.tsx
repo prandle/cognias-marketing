@@ -51,22 +51,8 @@ export function Footer({ version }: FooterProps) {
           </div>
 
           {/* RIGHT: Footer menu links */}
-          
           <FooterNav />
 
-          {/* {footerNav.length > 0 && (
-            <div className="flex flex-wrap gap-4 md:justify-end">
-              {footerNav.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="hover:text-slate-700 underline-offset-2 hover:underline"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          )} */}
 
         </div>
 

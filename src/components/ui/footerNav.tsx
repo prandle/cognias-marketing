@@ -2,22 +2,17 @@ import Link from "./Link";
 
 export default function footerNav() {
   return (
-    <header className="w-full border-b border-zinc-800">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="flex flex-wrap gap-4 md:justify-end">
 
-        <nav className="flex gap-6 text-sm text-zinc-400">
-          <Link to="/privacy" className="hover:text-white">
+          <Link to="/privacy" className="hover:text-slate-700 underline-offset-2 hover:underline">
             Privacy
           </Link>
-          <Link to="/cookies" className="hover:text-white">
+          <Link to="/cookies" className="hover:text-slate-700 underline-offset-2 hover:underline">
             Cookies
           </Link>
-          <Link to="/terms" className="hover:text-white">
+          <Link to="/terms" className="hover:text-slate-700 underline-offset-2 hover:underline">
             Terms
           </Link>
-        </nav>
-
-      </div>
-    </header>
+      </div> 
   );
 }
