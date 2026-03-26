@@ -1,0 +1,52 @@
+/* Apple — minimal, airy, slightly cool + subtle translucency feel */
+.theme-apple {
+  --primary: #0a84ff;
+  --bg-app: #f2f2f5;
+  --bg-surface: #ffffff;
+  --text: #1c1c1e;
+  --text-muted: #8e8e93;
+  --border: #d1d1d6;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+/* Microsoft — stronger contrast + signature blue + neutral gray base */
+.theme-microsoft {
+  --primary: #0067b8;
+  --bg-app: #edebe9;
+  --bg-surface: #ffffff;
+  --text: #201f1e;
+  --text-muted: #605e5c;
+  --border: #c8c6c4;
+  
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+}
+
+/* GitHub — deeper dark + green pop (more contrast) */
+.theme-github {
+  --primary: #3fb950;
+  --bg-app: #010409;
+  --bg-surface: #0d1117;
+  --text: #f0f6fc;
+  --text-muted: #8b949e;
+  --border: #21262d;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* Material — warmer background + bold, colorful accent */
+.theme-material {
+  --primary:#4F378B;
+  --bg-app: color-mix(in srgb, var(--primary) 5%, white);
+  --bg-surface: #ffffff;
+  --text: #202124;
+  --text-muted: #5f6368;
+  --border: #e0e0e0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}

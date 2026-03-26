@@ -1,0 +1,304 @@
+@layer components {
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* variants */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+/* secondary button */
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+  /* padding: 1.25rem; */
+
+  transition: background-color 0.15s ease, border-color 0.15s ease;  
+}
+  
+
+/* =========================
+   INPUT
+========================= */
+
+.input {
+  width: 100%;
+
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+
+  border: 1px solid var(--border);
+  background-color: var(--bg-surface);
+
+  color: var(--text);
+
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--focus-ring);
+  
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  display: inline-block;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  background-color: var(--bg-muted);
+  color: var(--text);
+}
+
+/* =========================
+   SIDEBAR ITEM
+========================= */
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.sidebar-item:hover {
+  background-color: var(--hover);
+}
+
+.sidebar-item.active {
+  background-color: var(--secondary);
+  font-weight: 500;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-muted);
+
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.table tr {
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.table tr:hover {
+  background-color: var(--hover);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: var(--surface-overlay);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+
+  width: 100%;
+  max-width: 500px;
+}
+
+
+/* =========================
+   CHAT CONTAINER
+========================= */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* =========================
+   CHAT BUBBLE
+========================= */
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+
+  font-size: 0.875rem;
+  line-height: 1.4;
+
+  border: 1px solid var(--border);
+}
+
+/* user message */
+
+.chat-user {
+  align-self: flex-end;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+}
+
+/* assistant message */
+
+.chat-assistant {
+  align-self: flex-start;
+  background-color: var(--bg-surface);
+  color: var(--text);
+}
+
+/* =========================
+   RESPONSE BLOCK (AI OUTPUT)
+========================= */
+
+.response {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-md);
+  padding: 1rem;
+
+  font-size: 0.875rem;
+}
+
+/* =========================
+   PROMPT INPUT (AI STYLE)
+========================= */
+
+.prompt-input {
+  width: 100%;
+
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--border);
+  background-color: var(--bg-surface);
+
+  color: var(--text);
+
+  resize: none;
+}
+
+.prompt-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+/* =========================
+   ALERTS
+========================= */
+
+.alert {
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  font-size: 0.875rem;
+}
+
+
+.alert-danger {
+  background-color: var(--danger-bg);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.alert-warning {
+  background-color: var(--warning-bg);
+  border: 1px solid var(--warning);
+  color: var(--warning);
+}
+
+/* =========================
+   SOURCE LIST
+========================= */
+
+.sources {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.sources ul {
+  margin-top: 0.25rem;
+  padding-left: 1rem;
+}
+
+}
