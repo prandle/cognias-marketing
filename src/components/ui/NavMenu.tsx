@@ -75,7 +75,8 @@ export default function Navbar() {
         
 
         {/* ✅ Desktop menu */}
-        <ul className="hidden items-center gap-1 md:flex">
+        <div className="hidden md:flex items-center gap-8">
+        <ul className="flex items-center gap-1">
           <li>
             <Link to="/features" className={linkClasses()}>
               Features
@@ -108,6 +109,8 @@ export default function Navbar() {
           >
             Get Started
           </a>
+        </div>
+
         </div>
 
         {/* ✅ Mobile burger */}
