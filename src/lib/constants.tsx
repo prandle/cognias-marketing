@@ -1,3 +1,5 @@
+import versionData from "../version.json";
+
 // config.ts
 export const config = {
   faviconUrl: "/Icon-cognias.png",
@@ -5,6 +7,8 @@ export const config = {
   cmpName:"Cognias",
   cmpCopyright:"All rights reserved.",
   cmpNumber:"07542460",
-  cmpAddress:"York"
+  cmpAddress:"York",
+
+  version: versionData.build,
 
 };

@@ -76,7 +76,7 @@ export function Footer({ version }: FooterProps) {
             <span className="flex items-center gap-1">
               Made with <Heart className="h-3 w-3 text-red-500" /> by Cognias
             </span>
-            <span>• Version 1.0.{version}</span>
+            <span>• Version 1.0.{config.version} {version}</span>
           </div>
         {/* )} */}
       </div>

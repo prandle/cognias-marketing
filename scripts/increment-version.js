@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 
-const versionFile = "./version.json";
+const versionFile = "./src/version.json";
 const envFile = "./.env";
 
 async function main() {
