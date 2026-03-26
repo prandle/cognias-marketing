@@ -61,12 +61,16 @@ export default function Navbar() {
           to="/"
           className="flex items-center gap-2 hover:opacity-80 transition"
         >
+        <div className="h-9 flex items-center">
           <img
             src="/cognias-logo.svg"
             alt="Cognias"
-            className="h-8 md:h-9 w-auto"
+            // className="h-8 md:h-9 w-auto"
+            className="h-full w-auto object-contain"
           />
+        </div>
         </Link>
+        
 
         {/* ✅ Desktop menu */}
         <ul className="hidden items-center gap-1 md:flex">
