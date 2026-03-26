@@ -61,14 +61,16 @@ export default function Navbar() {
           to="/"
           className="flex items-center gap-2 hover:opacity-80 transition"
         >
-        <div className="h-9 flex items-center">
+        {/* <div className="h-9 flex items-center"> */}
           <img
             src="/cognias-logo.svg"
             alt="Cognias"
-            // className="h-8 md:h-9 w-auto"
-            className="h-full w-auto object-contain"
+            className="h-8 md:h-9 max-w-[140px] object-contain"
           />
-        </div>
+          {/* className="h-8 md:h-9 w-auto" */}
+            
+          
+        {/* </div> */}
         </Link>
         
 
