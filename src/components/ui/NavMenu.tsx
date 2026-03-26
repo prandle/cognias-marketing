@@ -63,7 +63,7 @@ export default function Navbar() {
         >
         {/* <div className="h-9 flex items-center"> */}
           <img
-            src="/cognias-logo.svg"
+            src="/logo-cognias.svg"
             alt="Cognias"
             className="h-8 md:h-9 max-w-[140px] object-contain"
           />
