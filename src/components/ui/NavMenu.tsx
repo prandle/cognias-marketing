@@ -26,8 +26,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm"
+      className={`sticky top-0 z-50 transition-all duration-300 
+        ${ scrolled
+          ? "bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm"
           : "bg-white"
         }`}
     >
@@ -35,8 +36,10 @@ export default function Navbar() {
       {/* <nav className="border-b border-slate-200 bg-white"> */}
       {/* <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"> */}
       <div
-        className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-300 ${
-          scrolled ? "py-2" : "py-4"
+        className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-300 
+          ${ scrolled 
+            ? "py-2" 
+            : "py-4"
           }`}
       >
 
@@ -45,16 +48,15 @@ export default function Navbar() {
           to="/pages/home"
           className="flex items-center gap-2 hover:opacity-80 transition"
         >
-          {/* <div className="h-9 flex items-center"> */}
           <img
             src="/logo-cognias.svg"
             alt="Cognias"
-            className="h-8 md:h-9 max-w-[140px] object-contain"
+            className={`object-contain transition-all duration-300 
+              ${ scrolled 
+                ? "h-7" 
+                : "h-9"
+            }`}
           />
-          {/* className="h-8 md:h-9 w-auto" */}
-
-
-          {/* </div> */}
         </Link>
 
 
