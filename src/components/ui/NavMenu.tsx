@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* ✅ Logo (top left) */}
         <Link
-          to="/pages/home"
+          to="/"
           className="flex items-center gap-2 hover:opacity-80 transition"
         >
           <img
@@ -64,17 +64,17 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-1">
             <li>
-              <Link to="/pages/features" className={linkClasses()}>
+              <Link to="/features" className={linkClasses()}>
                 Features
               </Link>
             </li>
             <li>
-              <Link to="/pages/pricing" className={linkClasses()}>
+              <Link to="/pricing" className={linkClasses()}>
                 Pricing
               </Link>
             </li>
             <li>
-              <Link to="/pages/about" className={linkClasses()}>
+              <Link to="/about" className={linkClasses()}>
                 About
               </Link>
             </li>
@@ -124,13 +124,13 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-slate-200 bg-white px-4 py-3 md:hidden">
           <div className="flex flex-col gap-1">
-            <Link to="/pages/features" className={linkClasses()}>
+            <Link to="/features" className={linkClasses()}>
               Features
             </Link>
-            <Link to="/pages/pricing" className={linkClasses()}>
+            <Link to="/pricing" className={linkClasses()}>
               Pricing
             </Link>
-            <Link to="/pages/about" className={linkClasses()}>
+            <Link to="/about" className={linkClasses()}>
               About
             </Link>
 
