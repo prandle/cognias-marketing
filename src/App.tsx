@@ -23,7 +23,7 @@ function App() {
     <>
     <Navbar />
 
-    <main className="min-h-screen">
+    <main className="min-h-[50vh]">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
