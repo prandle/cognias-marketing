@@ -1,20 +1,14 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "../components/ui/index"
+
 
 export default function FeaturesPage() {
     return (
         <>
-            <Helmet>
-                <title>Cognias – AI Assistants for Your Business</title>
-                <meta
-                    name="description"
-                    content="Build AI assistants for compliance, auditing, and business workflows with Cognias."
-                />
+            <SEO
+                title="Cognias - AI Assistants for Your Business"
+                description="Build AI assistants for compliance, auditing, and business workflows with Cognias."
+            />
 
-                {/* Open Graph (for social sharing) */}
-                <meta property="og:title" content="Cognias AI Platform" />
-                <meta property="og:description" content="AI assistants for real-world workflows." />
-                <meta property="og:type" content="website" />
-            </Helmet>
             <h1>Features</h1>
         </>
     );
