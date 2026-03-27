@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { lazy, Suspense } from "react";
+import { usePageTracking } from "./lib/hooks/usePageTracking";
+
 import './App.css'
 import { Footer } from './components/ui/Footer'
 import { Navbar } from './components/ui/index'
-import { Routes, Route } from 'react-router-dom'
+import { useLocation, Routes, Route } from 'react-router-dom'
 // import HomePage from './pages/home'
 // import FeaturesPage from './pages/features'
 // import PricingPage from './pages/pricing'
@@ -21,6 +23,8 @@ const PrivacyPage = lazy(() => import ("./pages/privacy"));
 const TermsPage = lazy(() => import ("./pages/terms"));
 
 function App() {
+  const location = useLocation();
+  usePageTracking(); 
   return (
     <>
       <Navbar />
@@ -35,7 +39,7 @@ function App() {
           className="min-h-[50vh]"
         >
           <Suspense fallback={<div className="p-6">Loading...</div>}>
-          <Routes>
+          <Routes location={location}>
             <Route path="/" element={<HomePage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/about" element={<AboutPage />} />
