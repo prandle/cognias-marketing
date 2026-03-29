@@ -107,10 +107,9 @@ export default function AboutPage() {
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle_at_top,rgba(255,77,0,0.08),transparent_70%)]" />
 
                   <div className="text-xs font-semibold text-[#FF4D00] mb-2">
-                    {item.step}
+                    {item.step} - {item.icon}
                   </div>
-
-                  {item.icon}
+                  
 
                   <h3 className="text-lg font-semibold text-text mb-2">
                     {item.title}
