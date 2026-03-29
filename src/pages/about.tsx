@@ -1,49 +1,134 @@
 import { SEO, Button } from "../components/ui/index";
-import { Layers, Workflow, ShieldCheck } from "lucide-react";
+import {
+  Layers,
+  Workflow,
+  ShieldCheck,
+  Database,
+  Settings,
+  Bot
+} from "lucide-react";
 
 export default function AboutPage() {
   return (
     <>
       <SEO
         title="About - Cognias"
-        description="Learn about Cognias — our mission, approach, and why we’re building AI assistants for real business workflows."
+        description="Cognias is building AI assistants for real business workflows — structured, scalable, and production-ready."
       />
 
-      <div className="mx-auto w-full max-w-6xl px-4 py-12 space-y-20">
+      <div className="mx-auto w-full max-w-6xl px-4 py-12 space-y-24">
 
         {/* ========================================= */}
         {/* HERO */}
         {/* ========================================= */}
         <section className="text-center space-y-6">
           <h1 className="text-4xl md:text-5xl font-semibold text-text">
-            Built for real-world AI applications
+            AI that actually works for your business
           </h1>
 
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Cognias exists to make AI genuinely useful for businesses — not just
-            demos, but systems that integrate, scale, and solve real problems.
+            Cognias helps teams build AI assistants that operate within real
+            workflows — not just chat, but structured systems that deliver
+            consistent, reliable outcomes.
           </p>
         </section>
 
         {/* ========================================= */}
-        {/* STORY / MISSION */}
+        {/* LOGOS STRIP */}
         {/* ========================================= */}
-        <section className="bg-surface border border-border rounded-[var(--radius-lg)] p-8 shadow-sm space-y-6">
-          <h2 className="text-2xl font-semibold text-text">
-            Our mission
+        <section className="text-center space-y-6">
+          <p className="text-sm text-muted">
+            Built for teams across industries
+          </p>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
+            {[
+              "Compliance teams",
+              "SaaS builders",
+              "Consultancies",
+              "Operations teams",
+              "Internal tools",
+            ].map((item) => (
+              <div
+                key={item}
+                className="text-sm font-medium text-muted border border-border px-4 py-2 rounded-md bg-surface"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ========================================= */}
+        {/* HOW IT WORKS */}
+        {/* ========================================= */}
+        <section className="space-y-10">
+          <h2 className="text-2xl font-semibold text-text text-center">
+            How Cognias works
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-3">
+
+            {[
+              {
+                step: "01",
+                title: "Ingest your data",
+                desc: "Upload documents, connect data sources, and structure your knowledge base.",
+                icon: <Database className="mb-3 text-primary" />,
+              },
+              {
+                step: "02",
+                title: "Define workflows",
+                desc: "Configure how your assistant thinks, behaves, and operates within your processes.",
+                icon: <Settings className="mb-3 text-primary" />,
+              },
+              {
+                step: "03",
+                title: "Deploy assistants",
+                desc: "Launch AI assistants that can answer, act, and integrate into real environments.",
+                icon: <Bot className="mb-3 text-primary" />,
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="bg-surface border border-border rounded-[var(--radius-lg)] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition"
+              >
+                <div className="text-xs font-semibold text-muted mb-2">
+                  {item.step}
+                </div>
+
+                {item.icon}
+
+                <h3 className="text-lg font-semibold text-text mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm text-muted">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+
+          </div>
+        </section>
+
+        {/* ========================================= */}
+        {/* MISSION */}
+        {/* ========================================= */}
+        <section className="bg-surface border border-border rounded-[var(--radius-lg)] p-8 shadow-sm">
+          <h2 className="text-2xl font-semibold text-text mb-4">
+            A more practical approach to AI
           </h2>
 
           <p className="text-muted max-w-3xl">
-            We believe AI should be practical, reliable, and deeply integrated
-            into business workflows. Too many tools focus on surface-level
-            interactions — Cognias is built for structured knowledge,
-            repeatable processes, and real operational value.
+            Most AI tools are designed for interaction. Cognias is designed for
+            execution.
           </p>
 
-          <p className="text-muted max-w-3xl">
-            Our goal is to give teams the ability to create AI assistants that
-            don’t just answer questions, but actually help run parts of their
-            business.
+          <p className="text-muted max-w-3xl mt-4">
+            We focus on structured knowledge, defined workflows, and systems that
+            can be relied on in real environments — from compliance and auditing
+            to internal operations and vertical SaaS products.
           </p>
         </section>
 
@@ -52,24 +137,24 @@ export default function AboutPage() {
         {/* ========================================= */}
         <section className="space-y-8">
           <h2 className="text-2xl font-semibold text-text text-center">
-            How we think about AI
+            Built on a few core principles
           </h2>
 
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 title: "Structured, not generic",
-                desc: "AI should work with your data, processes, and constraints — not just generate text.",
+                desc: "AI should operate within defined systems, not just generate responses.",
                 icon: <Layers className="mb-3 text-primary" />,
               },
               {
-                title: "Workflow-driven",
-                desc: "Assistants should follow real business logic like auditing, compliance, and operations.",
+                title: "Workflow-native",
+                desc: "Assistants should follow real processes like auditing and reporting.",
                 icon: <Workflow className="mb-3 text-primary" />,
               },
               {
                 title: "Secure by design",
-                desc: "Data isolation and control are fundamental, especially in multi-tenant environments.",
+                desc: "Data isolation and control are fundamental at every level.",
                 icon: <ShieldCheck className="mb-3 text-primary" />,
               },
             ].map((item) => (
@@ -81,66 +166,75 @@ export default function AboutPage() {
                 <h3 className="text-lg font-semibold text-text mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted">
-                  {item.desc}
-                </p>
+                <p className="text-sm text-muted">{item.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* ========================================= */}
-        {/* WHAT MAKES COGNIAS DIFFERENT */}
+        {/* WHO IT'S FOR */}
         {/* ========================================= */}
         <section className="bg-surface border border-border rounded-[var(--radius-lg)] p-8 shadow-sm space-y-6">
           <h2 className="text-2xl font-semibold text-text">
-            What makes Cognias different
+            Who it’s for
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 text-sm text-muted">
-            <div className="space-y-3">
+          <div className="grid md:grid-cols-3 gap-6 text-sm text-muted">
+            <div>
+              <h3 className="text-text font-semibold mb-2">
+                Product teams
+              </h3>
               <p>
-                • Built for multi-tenant applications from day one
-              </p>
-              <p>
-                • Designed around real business workflows, not generic chat
-              </p>
-              <p>
-                • Flexible enough to support completely different domains
+                Building AI-powered SaaS products with multi-tenant architecture
+                and domain-specific intelligence.
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div>
+              <h3 className="text-text font-semibold mb-2">
+                Operations & compliance
+              </h3>
               <p>
-                • Strong focus on data structure and retrieval
+                Automating audits, documentation, and structured processes with
+                reliable AI systems.
               </p>
+            </div>
+
+            <div>
+              <h3 className="text-text font-semibold mb-2">
+                Internal tools
+              </h3>
               <p>
-                • API-first and integration-friendly
-              </p>
-              <p>
-                • Scales from internal tools to full SaaS products
+                Creating assistants that help teams navigate knowledge, systems,
+                and workflows efficiently.
               </p>
             </div>
           </div>
         </section>
 
         {/* ========================================= */}
-        {/* VISION */}
+        {/* FOUNDER NOTE */}
         {/* ========================================= */}
-        <section className="text-center space-y-6">
+        <section className="text-center max-w-3xl mx-auto space-y-6">
           <h2 className="text-2xl font-semibold text-text">
-            Where we’re going
+            A note from the founder
           </h2>
 
-          <p className="text-muted max-w-2xl mx-auto">
-            We’re building a platform where AI assistants become a core layer of
-            modern software — embedded into tools, workflows, and products across
-            every industry.
+          <p className="text-muted">
+            “We started Cognias after seeing how difficult it was to move from AI
+            demos to real, production-ready systems. The gap wasn’t in the models
+            — it was in the structure around them.
           </p>
 
-          <p className="text-muted max-w-2xl mx-auto">
-            Cognias is not just about interacting with AI — it’s about building
-            systems that think, assist, and operate alongside your business.
+          <p className="text-muted">
+            Cognias is our answer to that problem: a platform for building AI
+            assistants that are reliable, scalable, and actually useful in
+            day-to-day business operations.”
+          </p>
+
+          <p className="text-sm text-muted pt-2">
+            — Founder, Cognias
           </p>
         </section>
 
@@ -153,7 +247,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-muted">
-            Create your first AI assistant in minutes.
+            Create AI assistants that do more than just respond.
           </p>
 
           <a href="https://app.cognias.io">
