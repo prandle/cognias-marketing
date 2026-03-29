@@ -7,6 +7,8 @@ import {
   Settings,
   Bot
 } from "lucide-react";
+import { Quote } from "../components/ui/Quote";
+
 
 export default function AboutPage() {
   return (
@@ -221,21 +223,10 @@ export default function AboutPage() {
             A note from the founder
           </h2>
 
-          <p className="text-muted">
-            “We started Cognias after seeing how difficult it was to move from AI
-            demos to real, production-ready systems. The gap wasn’t in the models
-            — it was in the structure around them.
-          </p>
-
-          <p className="text-muted">
-            Cognias is our answer to that problem: a platform for building AI
-            assistants that are reliable, scalable, and actually useful in
-            day-to-day business operations.”
-          </p>
-
-          <p className="text-sm text-muted pt-2">
-            — Founder, Cognias
-          </p>
+        <Quote
+            quote="We started Cognias after seeing how difficult it was to move from AI demos to real, production-ready systems. The gap wasn’t in the models — it was in the structure around them. Cognias is our answer to that problem: a platform for building AI assistants that are reliable, scalable, and genuinely useful in day-to-day operations."
+            author="Paul Randle, CTO"
+        />
         </section>
 
         {/* ========================================= */}
