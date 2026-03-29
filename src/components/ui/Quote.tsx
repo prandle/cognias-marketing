@@ -16,7 +16,7 @@ export function Quote({ quote, author, role, avatarUrl }: QuoteProps) {
 
       {/* Card */}
       <div className="relative bg-surface border border-border rounded-[var(--radius-lg)] px-8 py-10 shadow-sm overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none"/>
         {/* Quote text */}
         <p className="text-lg md:text-xl text-text leading-relaxed">
           {quote}
@@ -39,8 +39,7 @@ export function Quote({ quote, author, role, avatarUrl }: QuoteProps) {
           </div>
 
         </div>
-      </div>
-      </div>
+      </div>      
     </div>
   );
 }
