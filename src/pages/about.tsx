@@ -1,4 +1,5 @@
-import { SEO, Button } from "../components/ui/index";
+import { SEO } from "../components/ui/index";
+import { GetStarted } from "../components/widgets/index";
 import {
   Layers,
   Workflow,
@@ -191,7 +192,7 @@ export default function AboutPage() {
           {/* ========================================= */}
           {/* WHO IT'S FOR */}
           {/* ========================================= */}
-          <section className="bg-surface border border-border rounded-[var(--radius-lg)] p-10 shadow-sm">
+          <section className="relative bg-surface border border-border rounded-[var(--radius-lg)] p-10 shadow-sm">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FF4D00]/5 via-transparent to-transparent pointer-events-none" />
 
             <h2 className="text-2xl font-semibold text-text mb-6">
@@ -248,7 +249,8 @@ export default function AboutPage() {
           {/* ========================================= */}
           {/* CTA */}
           {/* ========================================= */}
-          <section className="text-center space-y-6 pt-10">
+          <GetStarted />
+          {/* <section className="text-center space-y-6 pt-10">
             <h2 className="text-2xl font-semibold text-text">
               Start building with Cognias
             </h2>
@@ -262,7 +264,7 @@ export default function AboutPage() {
                 Get Started
               </Button>
             </a>
-          </section>
+          </section> */}
 
         </div>
       </div>
