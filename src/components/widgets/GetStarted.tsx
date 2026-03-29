@@ -11,7 +11,7 @@ type CTAProps = {
 
 const DEFAULTS = {
   title: "Start building with Cognias",
-  subtitle: "Create AI assistants that do more than just respond.",
+  subtitle: "Create AI assistants that do more.",
   ctaText: "Get Started",
   ctaUrl: "https://app.cognias.io",
 } as const;
