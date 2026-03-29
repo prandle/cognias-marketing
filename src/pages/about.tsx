@@ -1,4 +1,7 @@
-import { SEO, SectionBand } from "../components/ui/index";
+import { 
+  SEO, 
+  // SectionBand 
+} from "../components/ui/index";
 import { GetStarted } from "../components/widgets/index";
 import {
   Layers,
@@ -192,8 +195,8 @@ export default function AboutPage() {
           {/* ========================================= */}
           {/* WHO IT'S FOR */}
           {/* ========================================= */}
-          <SectionBand variant="muted">
-          {/* <section className="relative bg-surface border border-border rounded-[var(--radius-lg)] p-10 shadow-sm"> */}
+          {/* <SectionBand variant="muted"> */}
+          <section className="relative bg-surface border border-border rounded-[var(--radius-lg)] p-10 shadow-sm">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FF4D00]/5 via-transparent to-transparent pointer-events-none" />
 
             <h2 className="text-2xl font-semibold text-text mb-6">
@@ -231,8 +234,8 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-          {/* </section> */}
-          </SectionBand>
+          </section>
+          {/* </SectionBand> */}
 
           {/* ========================================= */}
           {/* FOUNDER NOTE */}
