@@ -192,6 +192,8 @@ export default function AboutPage() {
           {/* WHO IT'S FOR */}
           {/* ========================================= */}
           <section className="bg-surface border border-border rounded-[var(--radius-lg)] p-10 shadow-sm">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#FF4D00]/5 via-transparent to-transparent pointer-events-none" />
+
             <h2 className="text-2xl font-semibold text-text mb-6">
               Who it’s for
             </h2>
