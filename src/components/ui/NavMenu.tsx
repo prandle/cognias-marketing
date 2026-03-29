@@ -1,3 +1,4 @@
+import { Button } from "./index";
 import { useState, useEffect } from "react";
 import Link from "./Link";
 
@@ -89,12 +90,15 @@ export default function Navbar() {
               Login
             </a>
 
-            <a
+            <Button className="px-6 py-3 bg-[#FF4D00] hover:bg-[#e64500] text-white">
+                Get Started
+            </Button>
+            {/* <a
               href="https://app.cognias.io"
               className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition"
             >
               Get Started
-            </a>
+            </a> */}
           </div>
 
         </div>
