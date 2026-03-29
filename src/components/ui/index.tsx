@@ -1,6 +1,8 @@
 export { Button } from "./Button";
-export { Textarea } from "./Textarea";
-export { default as Navbar } from "./NavMenu";
-export { default as FooterNav } from "./footerNav";
 export { Footer } from "./Footer";
+export { default as FooterNav } from "./footerNav";
+export { default as Navbar } from "./NavMenu";
+export { Quote } from "./Quote";
+export { SectionBand } from "./SectionBand";
 export { SEO } from "./seo";
+export { Textarea } from "./Textarea";

@@ -1,4 +1,4 @@
-import { Button } from "../ui/index";
+import { Button, SectionBand } from "../ui/index";
 
 type CTAProps = {
     title?: string;
@@ -26,7 +26,8 @@ export function GetStarted(props: CTAProps) {
   const ctaUrl = props.ctaUrl ?? DEFAULTS.ctaUrl;
 
     return (
-        <section className="text-center space-y-6 pt-10">
+        <SectionBand variant="accent" className="text-center">
+        {/* <section className="text-center space-y-6 pt-10"> */}
             <h2 className="text-2xl font-semibold text-text">
                 {title}
             </h2>
@@ -40,7 +41,8 @@ export function GetStarted(props: CTAProps) {
                     {ctaText}
                 </Button>
             </a>
-        </section>
+        {/* </section> */}
+        </SectionBand>
 
     );
 }          
