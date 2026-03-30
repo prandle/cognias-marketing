@@ -1,5 +1,5 @@
 import { Container } from "../layout/index";
-import { Quote } from "lucide-react";
+import { Quote as QuoteIcon } from "lucide-react";
 
 type QuoteProps = {
   quote: string;
@@ -12,21 +12,23 @@ export function Quotation({ quote, author, role, avatarUrl }: QuoteProps) {
   return (
     <Container size="narrow" className="relative">
 
-      {/* Top-left quote icon */}
-      <Quote size="60" className="absolute -top-4 -left-4 text-4xl opacity-40 select-none pointer-events-none 
-                   text-border theme-inverse:text-white/40"
-      />
-
       {/* Card */}
-      <div className="relative bg-surface border border-border rounded-[var(--radius-lg)] px-8 py-10 shadow-sm overflow-hidden">
-        
+      <div className="relative bg-surface border border-border rounded-[var(--radius-lg)] px-8 py-10 shadow-sm overflow-hidden theme-inverse:bg-gradient-to-br theme-inverse:from-primary/80 theme-inverse:via-[#e64500] theme-inverse:to-[#cc3d00]">
+
+        {/* Quote icon inside padding */}
+        <QuoteIcon
+          size={48}
+          className="absolute top-6 left-6 text-border opacity-30 pointer-events-none 
+                     theme-inverse:text-white/40"
+        />
+
         {/* Quote text */}
-        <p className="text-lg md:text-xl leading-relaxed text-text theme-inverse:text-white/80">
+        <p className="text-lg md:text-xl leading-relaxed text-text theme-inverse:text-white/80 ml-14">
           {quote}
         </p>
 
         {/* Author */}
-        <div className="mt-6 flex items-center justify-start gap-3">
+        <div className="mt-6 flex items-center gap-3 ml-14">
 
           {avatarUrl && (
             <img
