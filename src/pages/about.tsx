@@ -171,7 +171,8 @@ export default function AboutPage() {
         {/* ========================================= */}
         {/* WHO IT'S FOR */}
         {/* ========================================= */}
-        <Container className="py-12 text-center">
+        <FullWidthBand variant="primary">
+        {/* <Container className="py-12 text-center"> */}
           <h2 className="text-2xl font-semibold text-text mb-8">
             Who it’s for
           </h2>
@@ -190,7 +191,8 @@ export default function AboutPage() {
               <p>Helping teams navigate knowledge and workflows.</p>
             </div>
           </div>
-        </Container>
+        {/* </Container> */}
+        </FullWidthBand>
 
         {/* ========================================= */}
         {/* FOUNDER NOTE */}
