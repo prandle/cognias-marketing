@@ -171,7 +171,7 @@ export default function AboutPage() {
         {/* ========================================= */}
         {/* WHO IT'S FOR */}
         {/* ========================================= */}
-        <FullWidthBand variant="primary">
+        <FullWidthBand variant="primary" className="py-12 text-center">
         {/* <Container className="py-12 text-center"> */}
           <h2 className="text-2xl font-semibold text-text mb-8">
             Who it’s for
@@ -211,9 +211,11 @@ export default function AboutPage() {
         {/* ========================================= */}
         {/* CTA BAND */}
         {/* ========================================= */}
-        <FullWidthBand variant="primary">
+        <Container>
+        {/* <FullWidthBand variant="primary"> */}
           <GetStarted />
-        </FullWidthBand>
+        {/* </FullWidthBand> */}
+        </Container>
 
       </div>
     </>
