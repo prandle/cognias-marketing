@@ -1,5 +1,6 @@
 import { 
   SEO, 
+  FullWidthBand
   // SectionBand 
 } from "../components/ui/index";
 import { GetStarted } from "../components/widgets/index";
@@ -30,7 +31,8 @@ export default function AboutPage() {
           <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(255,77,0,0.08),transparent_70%)]" />
         </div>
 
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 space-y-28">
+        {/* <div className="mx-auto w-full max-w-6xl px-4 py-16 space-y-28"> */}
+        <div className="mx-auto max-w-6xl px-4 py-16 space-y-28">
 
           {/* ========================================= */}
           {/* HERO */}
@@ -251,10 +253,17 @@ export default function AboutPage() {
             />
           </section>
 
+          </div>
+
+          {/* ================= FULL WIDTH BAND ================= */}
+          <FullWidthBand variant="primary">
+
           {/* ========================================= */}
           {/* CTA */}
           {/* ========================================= */}
           <GetStarted />
+
+          </FullWidthBand>
           {/* <section className="text-center space-y-6 pt-10">
             <h2 className="text-2xl font-semibold text-text">
               Start building with Cognias
@@ -271,7 +280,7 @@ export default function AboutPage() {
             </a>
           </section> */}
 
-        </div>
+        {/* </div> */}
       </div>
     </>
   );
