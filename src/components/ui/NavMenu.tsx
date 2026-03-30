@@ -149,7 +149,7 @@ export default function Navbar() {
 
             <a
               href="https://app.cognias.io"
-              className="mt-1 rounded-md bg-blue-600 px-3 py-2 text-sm text-white"
+              className="mt-1 rounded-md bg-primary px-3 py-2 text-sm text-white"
             >
               Get Started
             </a>
