@@ -42,7 +42,7 @@ export function GetStarted(props: CTAProps) {
 
       <a href={ctaUrl}>
         <Button
-          variant={themeInverse ? "ghost" : "primary"}
+          variant={themeInverse ? "outline" : "primary"}
           className="px-6 py-3"
         >
           {ctaText}

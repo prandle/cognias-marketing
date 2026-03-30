@@ -22,7 +22,7 @@ const variants = {
     "border border-[var(--border)] text-[var(--text)] hover:bg-[var(--secondary)] focus:ring-[var(--focus-ring)] disabled:opacity-50",
 
   ghost:
-    "text-[var(--text)] hover:bg-[var(--secondary)] focus:ring-[var(--focus-ring)] disabled:opacity-50",
+    "text-[var(--primary)] hover:bg-[var(--secondary)] focus:ring-[var(--focus-ring)] disabled:opacity-50",
 
   destructive:
   "text-[var(--danger)] hover:bg-[var(--danger-bg)] focus:ring-[var(--danger)]",
