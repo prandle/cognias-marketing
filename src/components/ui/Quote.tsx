@@ -1,3 +1,6 @@
+import { Container } from "../layout/index";
+import { MessageSquare } from "lucide-react";
+
 type QuoteProps = {
   quote: string;
   author: string;
@@ -7,22 +10,24 @@ type QuoteProps = {
 
 export function Quote({ quote, author, role, avatarUrl }: QuoteProps) {
   return (
-    <div className="relative max-w-3xl mx-auto text-center">
+    <Container size="narrow" className="relative">
 
-      {/* Subtle quote mark */}
-      <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-border opacity-40 select-none">
-        “
-      </div>
+      {/* Top-left quote icon */}
+      <MessageSquare 
+        className="absolute -top-4 -left-4 text-4xl opacity-40 select-none pointer-events-none 
+                   text-border theme-inverse:text-white/40"
+      />
 
       {/* Card */}
-      <div className="relative bg-surface border border-border rounded-[var(--radius-lg)] px-8 py-10 shadow-sm overflow-hidden">        
+      <div className="relative bg-surface border border-border rounded-[var(--radius-lg)] px-8 py-10 shadow-sm overflow-hidden">
+        
         {/* Quote text */}
-        <p className="text-lg md:text-xl text-text leading-relaxed">
+        <p className="text-lg md:text-xl leading-relaxed text-text theme-inverse:text-white/80">
           {quote}
         </p>
 
         {/* Author */}
-        <div className="mt-6 flex items-center justify-center gap-3">
+        <div className="mt-6 flex items-center justify-start gap-3">
 
           {avatarUrl && (
             <img
@@ -32,13 +37,15 @@ export function Quote({ quote, author, role, avatarUrl }: QuoteProps) {
             />
           )}
 
-          <div className="text-sm text-muted text-left">
-            <div className="font-medium text-text">{author}</div>
+          <div className="text-sm text-muted theme-inverse:text-white/60">
+            <div className="font-medium text-text theme-inverse:text-white">
+              {author}
+            </div>
             {role && <div>{role}</div>}
           </div>
 
         </div>
-      </div>      
-    </div>
+      </div>
+    </Container>
   );
 }
