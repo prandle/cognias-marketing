@@ -21,6 +21,7 @@ const AboutPage = lazy(() => import ("./pages/about"));
 const CookiesPage = lazy(() => import ("./pages/cookies"));
 const PrivacyPage = lazy(() => import ("./pages/privacy"));
 const TermsPage = lazy(() => import ("./pages/terms"));
+const ComponentsPage = lazy(() => import ("./pages/components"));
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,8 @@ function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/cookies" element={<CookiesPage />} />
             <Route path="/terms" element={<TermsPage />} />
+
+            <Route path="/components" element={<ComponentsPage />} />
           </Routes>
           </Suspense>
         </motion.main>
