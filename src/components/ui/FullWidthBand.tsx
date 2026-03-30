@@ -5,7 +5,7 @@ type FullWidthBandProps = {
 
 export function FullWidthBand({ children, variant = "primary" }: FullWidthBandProps) {
   const variants = {
-    primary: "bg-gradient-to-br from-primary via-[#e64500] to-[#cc3d00] text-white/80",
+    primary: "bg-gradient-to-br from-[#e64500] via-[#e64500] to-[#cc3d00] text-white/80",
     subtle: "bg-surface border-y border-border",
   };
 
