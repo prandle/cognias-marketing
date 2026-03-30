@@ -121,7 +121,7 @@ function AccordionItem({ value, children, themeInverse }: AccordionItemProps) {
       className={clsx(
         "border rounded-[var(--radius-md)] overflow-hidden",
         themeInverse
-          ? "bg-white/10 border-white/20"
+          ? "bg-white/3 border-white/20"
           : "bg-surface border-border"
       )}
     >

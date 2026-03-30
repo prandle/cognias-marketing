@@ -21,7 +21,7 @@ export function Quotation({ quote, author, role, avatarUrl, themeInverse }: Quot
         {/* Quote icon inside padding */}
         <QuoteIcon
           size={48}
-          className="absolute top-6 left-6 text-border opacity-30 pointer-events-none 
+          className="absolute bottom-6 right-6 text-border opacity-30 pointer-events-none 
                      theme-inverse:text-white/40"
         />
 
