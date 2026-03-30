@@ -26,7 +26,7 @@ export function GetStarted(props: CTAProps) {
   const ctaUrl = props.ctaUrl ?? DEFAULTS.ctaUrl;
 
     return (
-        <SectionBand variant="accent" className="text-center">
+        <SectionBand variant="default" className="text-center">
         {/* <section className="text-center space-y-6 pt-10"> */}
             <h2 className="text-2xl font-semibold text-text">
                 {title}
