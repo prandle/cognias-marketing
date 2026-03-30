@@ -26,7 +26,7 @@ export function FullWidthBand({
   return (
     <section
       className={`
-        relative w-full overflow-hidden
+        relative w-full overflow-hidden my-6
         ${isPrimary
           ? "bg-gradient-to-br from-[#ff5a1a] via-[#e64500] to-[#cc3d00] theme-inverse"
           : "bg-surface border-y border-border"

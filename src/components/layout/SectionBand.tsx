@@ -23,7 +23,7 @@ export function SectionBand({
   };
 /*via-background to-background*/
   return (
-    <section className={`${variants[variant]} ${className}`}>
+    <section className={`my-6 ${variants[variant]} ${className}`}>
       
       {/* Glow layer ONLY for accent */}
       {variant === "accent" && (
