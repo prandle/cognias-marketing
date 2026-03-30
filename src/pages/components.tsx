@@ -7,11 +7,17 @@ export default function ComponentsLibrary() {
   return (
 <>
     <Container>
+      <h2>Get Started - Light</h2>
         <GetStarted/>
     </Container>
 
+    <FullWidthBand variant="primary">
+      <h2>Get Started - Dark</h2>
+      <GetStarted/>
+    </FullWidthBand>
+
     <Container>
-      <h2>Buttons Light Background</h2>
+      <h2>Buttons - Light</h2>
         <Button
           variant="primary"
           className="px-6 py-3">
