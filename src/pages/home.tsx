@@ -1,4 +1,5 @@
-import { SEO, Button, HeroAnimation } from "../components/ui/index";
+import { Container } from "../components/layout";
+import { SEO, Button, HeroAnimation } from "../components/ui";
 import { Database, Layers, Workflow } from "lucide-react";
 
 export default function HomePage() {
@@ -17,9 +18,7 @@ export default function HomePage() {
         <section className="text-center space-y-6">
           <h1 className="text-4xl md:text-5xl font-semibold text-text">
             AI Assistants for Real Business Workflows
-          </h1>
-
-          <HeroAnimation />
+          </h1>          
 
           <p className="text-lg text-muted max-w-2xl mx-auto">
             Build, deploy and manage AI assistants for compliance, auditing,
@@ -77,6 +76,10 @@ export default function HomePage() {
             </div>
           ))}
         </section>
+
+        <Container>
+        <HeroAnimation />
+        </Container>
 
         {/* ========================================= */}
         {/* VALUE SECTION (like your admin cards) */}
