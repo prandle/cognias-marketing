@@ -25,6 +25,9 @@ export default function PrivacyPage() {
       <p className="text-muted-foreground mb-10">
         Last updated: {new Date().toLocaleDateString("en-GB")}
       </p>
+      <p className="text-muted-foreground mb-10">
+        Last Review: {new Date('2026-03-01').toLocaleDateString("en-GB")}
+      </p>
 
       <Accordion type="single" collapsible className="space-y-4">
 
@@ -36,7 +39,7 @@ export default function PrivacyPage() {
           </AccordionTrigger>
           <AccordionContent>
             <p>
-              We are the data controller responsible for your personal data.
+              We are the data controller responsible for personal data that you have provided us with.
               If you have any questions, please contact us using the details below.
             </p>
           </AccordionContent>
@@ -181,7 +184,7 @@ export default function PrivacyPage() {
           <AccordionContent>
             <p>
               If you have any questions about this privacy policy or your data,
-              please contact us at: support@yourdomain.com
+              please contact us at: <a href="mailto:support@cognias.io">support@cognias.io</a>
             </p>
           </AccordionContent>
         </AccordionItem>
