@@ -1,10 +1,9 @@
-import React, { Children, isValidElement, cloneElement } from "react";
-import type { ReactElement } from "react";
-
+import { Children, isValidElement, cloneElement } from "react";
+import type { ReactNode } from "react";
 import { Container } from "./index";
 
 type FullWidthBandProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: "primary" | "subtle";
   className?: string;
 };
@@ -16,15 +15,13 @@ export function FullWidthBand({
 }: FullWidthBandProps) {
   const isPrimary = variant === "primary";
 
-  const enhancedChildren = isPrimary
-    ? Children.map(children, (child) => {
-        if (isValidElement(child)) {
-          // Cast child as ReactElement with ThemeInverseProps
-          return cloneElement(child as ReactElement<React.HTMLAttributes<any> & { themeInverse?: boolean }>, { themeInverse: true });
-        }
-        return child;
-      })
-    : children;
+  const childrenWithTheme = Children.map(children, (child) => {
+    if (isPrimary && isValidElement(child)) {
+      // Only clone valid React components, add themeInverse
+      return cloneElement(child as React.ReactElement<any>, { themeInverse: true });
+    }
+    return child;
+  });
 
   return (
     <section
@@ -37,7 +34,6 @@ export function FullWidthBand({
         ${className}
       `}
     >
-      {/* Lighting layers */}
       {isPrimary && (
         <>
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_70%)] pointer-events-none" />
@@ -46,7 +42,7 @@ export function FullWidthBand({
       )}
 
       <Container className="relative py-24 md:py-28">
-        {enhancedChildren}
+        {childrenWithTheme}
       </Container>
     </section>
   );
