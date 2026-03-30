@@ -11,18 +11,22 @@ export function SectionBand({
   size = "md",
   className = "",
 }: SectionBandProps) {
-  const variants = {
-    default: "bg-background",
-    muted: "bg-surface/40 border-y border-border/60",
-    accent: `
-      relative overflow-hidden
-      bg-gradient-to-br 
-      from-primary/10 
-      via-primary/5 
-      to-transparent
-      border-y border-primary/20
-    `,
-  };
+const variants = {
+  default: "bg-background",
+
+  muted: `
+    relative
+    bg-surface/30
+  `,
+
+  accent: `
+    relative overflow-hidden
+    bg-gradient-to-br 
+    from-primary/10 
+    via-primary/5 
+    to-transparent
+  `,
+};
 
   const sizes = {
     sm: "py-10",
@@ -32,6 +36,12 @@ export function SectionBand({
 
   return (
     <section className={`${variants[variant]} ${className}`}>
+
+      {variant === "muted" && (
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(circle,rgba(255,77,0,0.04),transparent_70%)]" />
+        </div>
+      )}
       
       {/* Glow layer ONLY for accent */}
       {variant === "accent" && (
