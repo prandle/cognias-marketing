@@ -1,5 +1,5 @@
 import { Container } from "../layout/index";
-import { MessageSquare } from "lucide-react";
+import { Quote } from "lucide-react";
 
 type QuoteProps = {
   quote: string;
@@ -8,13 +8,12 @@ type QuoteProps = {
   avatarUrl?: string;
 };
 
-export function Quote({ quote, author, role, avatarUrl }: QuoteProps) {
+export function Quotation({ quote, author, role, avatarUrl }: QuoteProps) {
   return (
     <Container size="narrow" className="relative">
 
       {/* Top-left quote icon */}
-      <MessageSquare 
-        className="absolute -top-4 -left-4 text-4xl opacity-40 select-none pointer-events-none 
+      <Quote size="60" className="absolute -top-4 -left-4 text-4xl opacity-40 select-none pointer-events-none 
                    text-border theme-inverse:text-white/40"
       />
 

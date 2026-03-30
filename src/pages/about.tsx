@@ -9,7 +9,7 @@ import {
   Settings,
   Bot
 } from "lucide-react";
-import { Quote } from "../components/ui/Quote";
+import { Quotation } from "../components/ui/Quote";
 
 export default function AboutPage() {
   return (
@@ -220,7 +220,7 @@ export default function AboutPage() {
             A note from the founder
           </h2>
 
-          <Quote
+          <Quotation
             quote="We started Cognias after seeing how difficult it was to move from AI demos to real systems. The gap wasn’t in the models — it was in the structure around them."
             author="Pablo Randelo, CEO"
           />
