@@ -23,10 +23,11 @@ export default function PrivacyPage() {
         Privacy Policy
       </h1>
       <p className="text-muted-foreground mb-10">
-        Last updated: {new Date().toLocaleDateString("en-GB")}
+        <strong>Reviewed:</strong> {new Date('2026-03-01').toLocaleDateString("en-GB")} | <strong>Last updated:</strong> {new Date().toLocaleDateString("en-GB")}
       </p>
       <p className="text-muted-foreground mb-10">
-        Last Review: {new Date('2026-03-01').toLocaleDateString("en-GB")}
+      This privacy policy will help you understand the things we do and the long-term commitment we've made to make our privacy promise a reality.</p>
+      <p className="text-muted-foreground mb-10">We know that most privacy policies are dry and full of legal terms. So, we’ve done our best to make this one easy to digest. We’ve kept it clear by using plain language, short words and brief sentences so you can easily understand what we do with your data.
       </p>
 
       <Accordion type="single" collapsible className="space-y-4">
