@@ -252,7 +252,7 @@ export default function AboutPage() {
               author="Pablo Randelo, CEO"
             />
           </section>
-          <GetStarted />
+          
 
           </div>
 
@@ -262,7 +262,7 @@ export default function AboutPage() {
           {/* ========================================= */}
           {/* CTA */}
           {/* ========================================= */}
-          <h1>I am Full Width</h1>
+          <GetStarted />
 
           </FullWidthBand>
           {/* <section className="text-center space-y-6 pt-10">
