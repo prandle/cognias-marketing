@@ -41,7 +41,7 @@ export function FullWidthBand({
         </>
       )}
 
-      <Container className="relative py-24 md:py-28">
+      <Container className="relative py-16 md:py-20">
         {childrenWithTheme}
       </Container>
     </section>

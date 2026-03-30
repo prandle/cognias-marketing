@@ -19,7 +19,7 @@ export function Container({
   return (
     <div
       className={`
-        w-full mx-auto px-4 my-8
+        w-full mx-auto px-4 my-6
         ${sizes[size]}
         ${className}
       `}
