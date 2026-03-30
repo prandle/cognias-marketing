@@ -1,5 +1,5 @@
-import { Button, SectionBand } from "../ui/index";
-
+import { Button } from "../ui/index";
+import { SectionBand } from "../layout/index";
 type CTAProps = {
     title?: string;
     subtitle?: string;

@@ -1,0 +1,34 @@
+/* =========================================
+   INVERSE / ON-PRIMARY THEME
+========================================= */
+
+.theme-inverse {
+
+  /* TEXT */
+  --text: 255 255 255;
+  --text-muted: 255 255 255 / 0.8;
+
+  /* SURFACES */
+  --bg-surface: rgba(255, 255, 255, 0.05);
+  --bg-muted: rgba(255, 255, 255, 0.08);
+
+  /* BORDERS */
+  --border: rgba(255, 255, 255, 0.2);
+  --hover: rgba(255, 255, 255, 0.08);
+
+  /* PRIMARY (used for buttons etc) */
+  --primary: #ffffff;
+  --primary-foreground:var(--primary);
+  /* --primary-foreground: #FF4D00; */
+  --primary-hover: rgba(255, 255, 255, 0.9);
+
+  /* SECONDARY */
+  --secondary: rgba(255, 255, 255, 0.08);
+  --secondary-hover: rgba(255, 255, 255, 0.16);
+
+  /* INPUT / FOCUS */
+  --focus-ring: rgba(255, 255, 255, 0.25);
+
+  /* OVERLAY */
+  --surface-overlay: rgba(0, 0, 0, 0.5);
+}
