@@ -1,11 +1,29 @@
 import { Container, FullWidthBand } from "../components/layout/index";
-import { Button } from "../components/ui/index";
+import { Button, Accordion } from "../components/ui/index";
 import { GetStarted } from "../components/widgets/index";
 
 
 export default function ComponentsLibrary() {
   return (
 <>
+  <FullWidthBand variant="primary">
+    <Accordion type="multiple">
+      <Accordion.Item value="data">
+        <Accordion.Trigger>Data Collection</Accordion.Trigger>
+        <Accordion.Content>
+          We collect user data to improve services...
+        </Accordion.Content>
+      </Accordion.Item>
+
+      <Accordion.Item value="security">
+        <Accordion.Trigger>Security</Accordion.Trigger>
+        <Accordion.Content>
+          We implement strong security measures...
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion>
+  </FullWidthBand>
+
     <Container>
       <h2>Get Started - Light</h2>
         <GetStarted/>

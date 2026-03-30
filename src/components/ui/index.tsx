@@ -5,3 +5,4 @@ export { default as Navbar } from "./NavMenu";
 export { Quotation } from "./Quote";
 export { SEO } from "./seo";
 export { Textarea } from "./Textarea";
+export { Accordion } from "./Accordion";

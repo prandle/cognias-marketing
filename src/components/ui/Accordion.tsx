@@ -9,9 +9,14 @@ import type { ReactNode, KeyboardEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
 
-/* ------------------ Context ------------------ */
+
+/* ------------------ Types ------------------ */
 
 type AccordionType = "single" | "multiple";
+
+type ThemeProps = {
+  themeInverse?: boolean;
+};
 
 type AccordionContextType = {
   openItems: string[];
@@ -21,15 +26,19 @@ type AccordionContextType = {
   focusPrev: (current: HTMLButtonElement) => void;
 };
 
+/* ------------------ Context ------------------ */
+
 const AccordionContext = createContext<AccordionContextType | null>(null);
 
 function useAccordion() {
   const ctx = useContext(AccordionContext);
-  if (!ctx) throw new Error("Must be used within Accordion");
+  if (!ctx) {
+    throw new Error("Accordion components must be used within <Accordion>");
+  }
   return ctx;
 }
 
-/* ------------------ Root ------------------ */
+/* ------------------ Root Accordion ------------------ */
 
 type AccordionProps = {
   children: ReactNode;
@@ -38,7 +47,7 @@ type AccordionProps = {
   className?: string;
 };
 
-export function Accordion({
+function AccordionRoot({
   children,
   type = "single",
   collapsible = true,
@@ -98,14 +107,27 @@ export function Accordion({
 type AccordionItemProps = {
   value: string;
   children: ReactNode;
-};
+} & ThemeProps;
 
-export function AccordionItem({ value, children }: AccordionItemProps) {
+function AccordionItem({ value, children, themeInverse }: AccordionItemProps) {
+  const id = useId();
+
   return (
-    <div className="border border-border rounded-[var(--radius-md)] overflow-hidden bg-surface">
+    <div
+      className={clsx(
+        "border rounded-[var(--radius-md)] overflow-hidden",
+        themeInverse
+          ? "bg-white/10 border-white/20"
+          : "bg-surface border-border"
+      )}
+    >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
-          ? React.cloneElement(child as React.ReactElement<any>, { value })
+          ? React.cloneElement(child as React.ReactElement<any>, {
+              value,
+              itemId: id,
+              themeInverse,
+            })
           : child
       )}
     </div>
@@ -117,23 +139,19 @@ export function AccordionItem({ value, children }: AccordionItemProps) {
 type AccordionTriggerProps = {
   children: ReactNode;
   value?: string;
-};
+  itemId?: string;
+} & ThemeProps;
 
-export function AccordionTrigger({
+function AccordionTrigger({
   children,
   value,
+  itemId,
+  themeInverse,
 }: AccordionTriggerProps) {
-  const {
-    openItems,
-    toggleItem,
-    registerTrigger,
-    focusNext,
-    focusPrev,
-  } = useAccordion();
+  const { openItems, toggleItem, registerTrigger, focusNext, focusPrev } =
+    useAccordion();
 
   const ref = useRef<HTMLButtonElement>(null);
-  const id = useId();
-
   const isOpen = value ? openItems.includes(value) : false;
 
   const handleKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
@@ -165,22 +183,21 @@ export function AccordionTrigger({
       onClick={() => value && toggleItem(value)}
       onKeyDown={handleKeyDown}
       aria-expanded={isOpen}
-      aria-controls={`content-${id}`}
-      id={`trigger-${id}`}
+      aria-controls={`content-${itemId}`}
+      id={`trigger-${itemId}`}
       className={clsx(
-        "w-full flex items-center justify-between px-4 py-3 text-left",
-        "bg-surface hover:bg-muted transition",
-        "font-medium focus:outline-none focus:ring-2 focus:ring-primary"
+        "w-full flex items-center justify-between px-4 py-3 text-left font-medium transition",
+        themeInverse
+          ? "bg-white/5 hover:bg-white/10 text-white"
+          : "bg-surface hover:bg-muted",
+        "focus:outline-none focus:ring-2 focus:ring-primary"
       )}
     >
       <div className="flex items-center">{children}</div>
 
       <ChevronDown
         size={18}
-        className={clsx(
-          "transition-transform duration-200",
-          isOpen && "rotate-180"
-        )}
+        className={clsx("transition-transform duration-200", isOpen && "rotate-180")}
       />
     </button>
   );
@@ -191,28 +208,39 @@ export function AccordionTrigger({
 type AccordionContentProps = {
   children: ReactNode;
   value?: string;
-};
+  itemId?: string;
+} & ThemeProps;
 
-export function AccordionContent({
+function AccordionContent({
   children,
   value,
+  itemId,
+  themeInverse,
 }: AccordionContentProps) {
   const { openItems } = useAccordion();
-  const id = useId();
-
   const isOpen = value ? openItems.includes(value) : false;
 
   return (
     <div
-      id={`content-${id}`}
+      id={`content-${itemId}`}
       role="region"
-      aria-labelledby={`trigger-${id}`}
+      aria-labelledby={`trigger-${itemId}`}
       className={clsx(
         "px-4 overflow-hidden transition-all duration-300",
         isOpen ? "max-h-96 py-3" : "max-h-0"
       )}
     >
-      <div className="text-sm text-muted-foreground">{children}</div>
+      <div className={clsx("text-sm", themeInverse ? "text-white/80" : "text-muted-foreground")}>
+        {children}
+      </div>
     </div>
   );
 }
+
+/* ------------------ Combine sub-components ------------------ */
+
+export const Accordion = Object.assign(AccordionRoot, {
+  Item: AccordionItem,
+  Trigger: AccordionTrigger,
+  Content: AccordionContent,
+});
