@@ -14,7 +14,7 @@ export default function ComponentsLibrary() {
     #formsForms</a>
     #tablesTables</a>
     #mediaMedia</a> */}
-    <Link to="#reactComponents">React Components</Link>
+    <Link to="#reactComponents" className="ease-in-out duration-500">React Components</Link>
   </nav>
 
 
