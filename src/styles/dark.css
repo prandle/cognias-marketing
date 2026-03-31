@@ -9,8 +9,8 @@
   --text-muted: 255 255 255 / 0.8;
 
   /* SURFACES */
-  --bg-surface: rgba(255, 255, 255, 0.35);
-  --bg-muted: rgba(255, 255, 255, 0.38);
+  --bg-surface: rgba(255, 255, 255, 0.75);
+  --bg-muted: rgba(255, 255, 255, 0.08);
 
   /* BORDERS */
   --border: rgba(255, 255, 255, 0.35);
