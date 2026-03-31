@@ -11,14 +11,13 @@ export default function ComponentsLibrary() {
   return (
     <>
 
-<div className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b">
-  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
-
+<div className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b shadow-sm">
+  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
     {/* Nav links */}
-    <nav className="flex gap-6 overflow-x-auto">
+    <nav className="flex gap-3 overflow-x-auto no-scrollbar whitespace-nowrap">
       <ComponentsNav/>
     </nav>
-
+    </div>
     {/* Toggle */}
     <div className="flex items-center gap-3 shrink-0">
       <span className="text-sm">Light</span>
@@ -38,8 +37,7 @@ export default function ComponentsLibrary() {
 
       <span className="text-sm">Primary</span>
     </div>
-
-  </div>
+  
 </div>
 
       {/* React Components */}
