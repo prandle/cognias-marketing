@@ -1,4 +1,4 @@
-import { FullWidthBand } from "../components/layout";
+import { FullWidthBand, Container } from "../components/layout";
 import { ComponentsNav, HeroAnimation } from "../components/ui";
 import { GetStarted } from "../components/widgets";
 import { SampleButtons, SampleAccordion } from "../components/examples";
@@ -43,26 +43,26 @@ export default function ComponentsLibrary() {
 
       {/* React Components */}
       {/* Accordion */}
-      <h2 id="accordions" className="text-primary scroll-mt-24">Accordion</h2>
+      <Container><h2 id="accordions" className="text-primary scroll-mt-24">Accordion</h2></Container>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
         <SampleAccordion/>
       </FullWidthBand>
 
       {/* Get Satered */}
-      <h2 id="cta" className="text-primary scroll-mt-24">Main CTA</h2>
+      <Container><h2 id="cta" className="text-primary scroll-mt-24">Main CTA</h2></Container>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
         <GetStarted />
       </FullWidthBand>
 
       {/* Buttons */}
-      <h2 id="buttons" className="text-primary scroll-mt-24">Buttons</h2>
+      <Container><h2 id="buttons" className="text-primary scroll-mt-24">Buttons</h2></Container>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
         <SampleButtons/>
       </FullWidthBand>
 
 
       {/* Animation */}
-      <h2 id="animation" className="text-primary scroll-mt-24">Animation</h2>
+      <Container><h2 id="animation" className="text-primary scroll-mt-24">Animation</h2></Container>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
         <HeroAnimation/>
       </FullWidthBand>
