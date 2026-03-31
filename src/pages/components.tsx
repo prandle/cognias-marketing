@@ -1,7 +1,8 @@
 import { FullWidthBand } from "../components/layout";
-import { Link, Button, Accordion } from "../components/ui";
+import { Button, Accordion, ComponentsNav } from "../components/ui";
 import { GetStarted } from "../components/widgets";
 import { useState } from "react";
+
 
 export default function ComponentsLibrary() {
 
@@ -10,30 +11,36 @@ export default function ComponentsLibrary() {
   return (
     <>
 
-      <nav className="row">
-        <Link to="#typography" className="ease-in-out duration-500">Typography</Link>
-        <Link to="#links" className="ease-in-out duration-500">Links</Link>
-        <Link to="#buttons" className="ease-in-out duration-500">Buttons</Link>
-        <Link to="#forms" className="ease-in-out duration-500">Forms</Link>
-        <Link to="#tables" className="ease-in-out duration-500">Tables</Link>
-        <Link to="#media" className="ease-in-out duration-500">Media</Link>
-        <Link to="#reactComponents" className="ease-in-out duration-500">React Components</Link>
-      </nav>
+<div className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b">
+  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
 
-      <div className="flex items-center gap-3 py-4">
-        <span>Light</span>
-        <button
-          onClick={() => setIsPrimaryBg(prev => !prev)}
-          className={`w-12 h-6 rounded-full transition ${isPrimaryBg ? "bg-primary" : "bg-gray-300"
-            }`}
-        >
-          <div
-            className={`h-6 w-6 bg-white rounded-full shadow transform transition ${isPrimaryBg ? "translate-x-6" : ""
-              }`}
-          />
-        </button>
-        <span>Primary</span>
-      </div>
+    {/* Nav links */}
+    <nav className="flex gap-6 overflow-x-auto">
+      <ComponentsNav/>
+    </nav>
+
+    {/* Toggle */}
+    <div className="flex items-center gap-3 shrink-0">
+      <span className="text-sm">Light</span>
+
+      <button
+        onClick={() => setIsPrimaryBg(prev => !prev)}
+        className={`w-12 h-6 rounded-full transition ${
+          isPrimaryBg ? "bg-primary" : "bg-gray-300"
+        }`}
+      >
+        <div
+          className={`h-6 w-6 bg-white rounded-full shadow transform transition ${
+            isPrimaryBg ? "translate-x-6" : ""
+          }`}
+        />
+      </button>
+
+      <span className="text-sm">Primary</span>
+    </div>
+
+  </div>
+</div>
 
       {/* React Components */}
       {/* Accordion */}

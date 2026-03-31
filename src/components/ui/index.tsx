@@ -8,3 +8,4 @@ export { Textarea } from "./Textarea";
 export { Accordion } from "./Accordion";
 export { HeroAnimation } from "./HeroAnimation";
 export { default as Link} from "./Link"
+export { default as ComponentsNav} from "./componentsMenu"
