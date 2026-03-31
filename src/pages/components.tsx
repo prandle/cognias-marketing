@@ -11,7 +11,7 @@ export default function ComponentsLibrary() {
   return (
     <>
 
-<div className="sticky top-15 z-40 bg-background/80 backdrop-blur border-b shadow-sm">
+<div className="sticky top-15 z-40 bg-background/60 backdrop-blur border-b shadow-sm">
   <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
     {/* Nav links */}
     <nav className="flex gap-3 overflow-x-auto no-scrollbar whitespace-nowrap">
@@ -19,7 +19,7 @@ export default function ComponentsLibrary() {
     </nav>
     </div>
     {/* Toggle */}
-    <div className="flex items-center gap-3 shrink-0">
+    <div className="max-w-6xl mx-auto flex overflow-x-auto no-scrollbar whitespace-nowrap items-center gap-3 shrink-0">
       <span className="text-sm">Light</span>
 
       <button
