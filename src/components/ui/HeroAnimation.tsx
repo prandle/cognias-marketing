@@ -10,7 +10,7 @@ export const HeroAnimation = () => {
       bg-center
       bg-no-repeat
       ">
-    <div className="relative z-0">
+    <div className="relative z-10">
       <svg
         viewBox="0 0 900 420"
         width="100%"
@@ -149,7 +149,7 @@ export const HeroAnimation = () => {
         </g>
       </svg>
       </div>
-      <div className="absolute inset-0 bg-white/85 z-10" />
+      <div className="absolute inset-0 bg-white/85 z-5" />
     </div>
   );
 };
