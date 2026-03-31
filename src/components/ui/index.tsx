@@ -7,3 +7,4 @@ export { SEO } from "./seo";
 export { Textarea } from "./Textarea";
 export { Accordion } from "./Accordion";
 export { HeroAnimation } from "./HeroAnimation";
+export { default as Link} from "./Link"

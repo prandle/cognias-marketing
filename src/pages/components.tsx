@@ -1,11 +1,23 @@
-import { Container, FullWidthBand } from "../components/layout/index";
-import { Button, Accordion } from "../components/ui/index";
-import { GetStarted } from "../components/widgets/index";
+import { Container, FullWidthBand } from "../components/layout";
+import { Link, Button, Accordion } from "../components/ui";
+import { GetStarted } from "../components/widgets";
 
 
 export default function ComponentsLibrary() {
   return (
 <>
+
+  <nav className="row">
+    {/* <Link to="#typographyTypography" /> */}
+    {/* #linksLinks</a>
+    #buttonsButtons</a>
+    #formsForms</a>
+    #tablesTables</a>
+    #mediaMedia</a> */}
+    <Link to="#reactComponents">React Components</Link>
+  </nav>
+
+
   <FullWidthBand variant="primary">
     <Accordion type="multiple">
       <Accordion.Item value="data">
@@ -64,6 +76,7 @@ export default function ComponentsLibrary() {
 
     </Container>
     <FullWidthBand variant="primary">
+      <div id="reactComponents"/>
       <h2>Buttons Dark Background</h2>
         <Button
           variant="primary"
