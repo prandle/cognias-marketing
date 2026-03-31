@@ -11,7 +11,7 @@ export default function ComponentsLibrary() {
   return (
     <>
 
-<div className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b shadow-sm">
+<div className="sticky top-15 z-40 bg-background/80 backdrop-blur border-b shadow-sm">
   <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
     {/* Nav links */}
     <nav className="flex gap-3 overflow-x-auto no-scrollbar whitespace-nowrap">
