@@ -158,7 +158,7 @@ export default function AboutPage() {
         </SectionBand>
 
         {/* WHO + FOUNDER (muted band) */}
-        <SectionBand variant="accent" size="sm">
+        <SectionBand variant="muted" size="sm">
           <div className="space-y-10 text-center">
             <div>
               <h2 className="text-2xl font-semibold text-text mb-8">
@@ -186,19 +186,22 @@ export default function AboutPage() {
                 A note from the founder
               </h2>
 
-              <Quotation
-                quote="We started Cognias after seeing how difficult it was to move from AI demos to real systems."
-                author="Pablo Randelo, CEO"
-              />
+
             </div>
           </div>
         </SectionBand>
 
         {/* CTA */}
         <FullWidthBand variant="primary">
-          <GetStarted />
+              <Quotation
+                quote="We started Cognias after seeing how difficult it was to move from AI demos to real systems."
+                author="Pablo Randelo, CEO"
+              />          
         </FullWidthBand>
 
+        <SectionBand size="sm">
+          <GetStarted />
+        </SectionBand>
       </div>
     </>
   );
