@@ -158,7 +158,7 @@ export default function AboutPage() {
         </SectionBand>
 
         {/* WHO + FOUNDER (muted band) */}
-        <SectionBand variant="muted" size="sm">
+        <SectionBand variant="accent" size="sm">
           <div className="space-y-10 text-center">
             <div>
               <h2 className="text-2xl font-semibold text-text mb-8">
