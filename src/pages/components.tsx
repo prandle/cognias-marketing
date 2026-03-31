@@ -64,7 +64,9 @@ export default function ComponentsLibrary() {
       {/* Quote */}
       <Container><h2 id="buttons" className="text-primary scroll-mt-24">Quote</h2></Container>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
-        <Quotation/>
+        <Quotation
+          quote="We started Cognias after seeing how difficult it was to move from AI demos to real systems."
+          author="Pablo Randelo, CEO"/>
       </FullWidthBand>
 
 
