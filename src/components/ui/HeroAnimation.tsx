@@ -2,7 +2,13 @@
 
 export const HeroAnimation = () => {
   return (
-    <div className="hero-animation">
+    <div className="
+      hero-animation
+      bg-[url('/abstract.jpg')]
+      bg-cover
+      bg-center
+      bg-no-repeat
+      ">
       <svg
         viewBox="0 0 900 420"
         width="100%"
