@@ -4,7 +4,7 @@ export const HeroAnimation = () => {
   return (
     <div className="
       hero-animation
-      bg-[url('/abstract.jpeg')]
+      bg-[url('/abstract_2.jpeg')]
       bg-cover
       bg-center
       bg-no-repeat
