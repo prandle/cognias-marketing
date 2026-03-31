@@ -8,15 +8,10 @@ import React, {
 import type { ReactNode, KeyboardEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
-
+import { useTheme } from "../../lib/themeContext"; 
 
 /* ------------------ Types ------------------ */
-
 type AccordionType = "single" | "multiple";
-
-type ThemeProps = {
-  themeInverse?: boolean;
-};
 
 type AccordionContextType = {
   openItems: string[];
@@ -27,7 +22,6 @@ type AccordionContextType = {
 };
 
 /* ------------------ Context ------------------ */
-
 const AccordionContext = createContext<AccordionContextType | null>(null);
 
 function useAccordion() {
@@ -39,13 +33,11 @@ function useAccordion() {
 }
 
 /* ------------------ Root Accordion ------------------ */
-
 type AccordionProps = {
   children: ReactNode;
   type?: AccordionType;
   collapsible?: boolean;
   className?: string;
-  themeInverse?: boolean;
 };
 
 function AccordionRoot({
@@ -53,7 +45,6 @@ function AccordionRoot({
   type = "single",
   collapsible = true,
   className,
-  themeInverse,
 }: AccordionProps) {
   const [openItems, setOpenItems] = useState<string[]>([]);
   const triggersRef = useRef<HTMLButtonElement[]>([]);
@@ -90,18 +81,13 @@ function AccordionRoot({
     prev?.focus();
   };
 
-  const childrenWithTheme = React.Children.map(children, (child) =>
-    React.isValidElement<ThemeProps>(child)
-      ? React.cloneElement(child, { themeInverse })
-      : child
-  );
-
-
   return (
     <AccordionContext.Provider
       value={{ openItems, toggleItem, registerTrigger, focusNext, focusPrev }}
     >
-      <div className={clsx("space-y-2", className)}>{childrenWithTheme}</div>
+      <div className={clsx("space-y-2", className)}>
+        {children}
+      </div>
     </AccordionContext.Provider>
   );
 }
@@ -111,27 +97,26 @@ function AccordionRoot({
 type AccordionItemProps = {
   value: string;
   children: ReactNode;
-} & ThemeProps;
+};
 
-function AccordionItem({ value, children, themeInverse }: AccordionItemProps) {
+function AccordionItem({ value, children }: AccordionItemProps) {
   const id = useId();
+  const { themeInverse } = useTheme(); 
 
   return (
     <div
       className={clsx(
         "border rounded-[var(--radius-md)] overflow-hidden",
         themeInverse
-          ? "bg-white/3 border-white/20"
+          ? "bg-white/5 border-white/30" 
           : "bg-surface border-border"
       )}
     >
-
-    {React.Children.map(children, (child) =>
-      React.isValidElement<{ value?: string; itemId?: string; themeInverse?: boolean }>(child)
-        ? React.cloneElement(child, { value, itemId: id, themeInverse })
-        : child
-    )}
-      
+      {React.Children.map(children, (child) =>
+        React.isValidElement<{ value?: string; itemId?: string }>(child)
+          ? React.cloneElement(child, { value, itemId: id })
+          : child
+      )}
     </div>
   );
 }
@@ -142,16 +127,17 @@ type AccordionTriggerProps = {
   children: ReactNode;
   value?: string;
   itemId?: string;
-} & ThemeProps;
+};
 
 function AccordionTrigger({
   children,
   value,
   itemId,
-  themeInverse,
 }: AccordionTriggerProps) {
   const { openItems, toggleItem, registerTrigger, focusNext, focusPrev } =
     useAccordion();
+  const { themeInverse } = useTheme();
+
   const ref = useRef<HTMLButtonElement>(null);
   const isOpen = value ? openItems.includes(value) : false;
 
@@ -189,14 +175,19 @@ function AccordionTrigger({
         "w-full flex items-center justify-between px-4 py-3 text-left font-medium transition",
         themeInverse
           ? "bg-white/5 hover:bg-white/10 text-white"
-          : "bg-surface hover:bg-muted text-default",
-        "focus:outline-none focus:ring-2 focus:ring-primary"
+          : "bg-surface hover:bg-muted text-[var(--text)]",
+        "focus:outline-none focus:ring-2 focus:ring-[var(--focus-ring)]"
       )}
     >
       <div className="flex items-center">{children}</div>
+
       <ChevronDown
         size={18}
-        className={clsx("transition-transform duration-200", isOpen && "rotate-180")}
+        className={clsx(
+          "transition-transform duration-200",
+          isOpen && "rotate-180",
+          themeInverse ? "text-white/70" : "text-muted"
+        )}
       />
     </button>
   );
@@ -208,15 +199,16 @@ type AccordionContentProps = {
   children: ReactNode;
   value?: string;
   itemId?: string;
-} & ThemeProps;
+};
 
 function AccordionContent({
   children,
   value,
   itemId,
-  themeInverse,
 }: AccordionContentProps) {
   const { openItems } = useAccordion();
+  const { themeInverse } = useTheme(); 
+
   const isOpen = value ? openItems.includes(value) : false;
 
   return (
@@ -232,7 +224,7 @@ function AccordionContent({
       <div
         className={clsx(
           "text-sm",
-          themeInverse ? "text-white/80" : "text-muted-foreground"
+          themeInverse ? "text-white/80" : "text-muted"
         )}
       >
         {children}
@@ -241,7 +233,7 @@ function AccordionContent({
   );
 }
 
-/* ------------------ Combine sub-components ------------------ */
+/* ------------------ Export ------------------ */
 
 export const Accordion = Object.assign(AccordionRoot, {
   Item: AccordionItem,

@@ -13,18 +13,23 @@
   --bg-muted: rgba(255, 255, 255, 0.08);
 
   /* BORDERS */
-  --border: rgba(255, 255, 255, 0.2);
-  --hover: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.35);
+  --hover: rgba(255, 255, 255, 0.12);
 
   /* PRIMARY (used for buttons etc) */
   --primary: #ffffff;
-  --primary-foreground:var(--primary);
-  /* --primary-foreground: #FF4D00; */
+  /* --primary-foreground:var(--primary); */
+  --primary-foreground: #FF4D00;
   --primary-hover: rgba(255, 255, 255, 0.9);
 
   /* SECONDARY */
   --secondary: rgba(255, 255, 255, 0.08);
   --secondary-hover: rgba(255, 255, 255, 0.16);
+
+  /* DANGER */
+  --danger: #ff4d4f;
+  --danger-hover: rgba(255, 77, 79, 0.12);
+
 
   /* INPUT / FOCUS */
   --focus-ring: rgba(255, 255, 255, 0.25);

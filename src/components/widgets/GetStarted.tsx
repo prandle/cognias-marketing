@@ -1,4 +1,5 @@
 import { Button } from "../ui/index";
+import { useTheme } from "../../lib/themeContext";
 
 type CTAProps = {
   title?: string;
@@ -20,7 +21,8 @@ export function GetStarted(props: CTAProps) {
   const subtitle = props.subtitle ?? DEFAULTS.subtitle;
   const ctaText = props.ctaText ?? DEFAULTS.ctaText;
   const ctaUrl = props.ctaUrl ?? DEFAULTS.ctaUrl;
-  const themeInverse = props.themeInverse ?? false;
+  const { themeInverse: contextInverse } = useTheme();
+  const themeInverse = props.themeInverse ?? contextInverse;
 
   return (
     <div
@@ -42,8 +44,8 @@ export function GetStarted(props: CTAProps) {
 
       <a href={ctaUrl}>
         <Button
-          variant={themeInverse ? "outline" : "primary"}
-          className="px-6 py-3"
+          variant="primary"
+          className={themeInverse ? "bg-white text-[#FF4D00] hover:bg-white/90" : ""}
         >
           {ctaText}
         </Button>
