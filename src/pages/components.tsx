@@ -1,5 +1,5 @@
 import { FullWidthBand, Container } from "../components/layout";
-import { ComponentsNav, HeroAnimation } from "../components/ui";
+import { ComponentsNav, HeroAnimation, Quotation } from "../components/ui";
 import { GetStarted } from "../components/widgets";
 import { SampleButtons, SampleAccordion } from "../components/examples";
 import { useState } from "react";
@@ -58,6 +58,13 @@ export default function ComponentsLibrary() {
       <Container><h2 id="buttons" className="text-primary scroll-mt-24">Buttons</h2></Container>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
         <SampleButtons/>
+      </FullWidthBand>
+
+
+      {/* Quote */}
+      <Container><h2 id="buttons" className="text-primary scroll-mt-24">Quote</h2></Container>
+      <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
+        <Quotation/>
       </FullWidthBand>
 
 

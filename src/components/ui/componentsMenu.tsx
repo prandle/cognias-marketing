@@ -18,7 +18,7 @@ export default function componentsNav() {
       <Link to="#typography" className={linkClasses()}>Typography</Link>
       <Link to="#buttons" className={linkClasses()}>Buttons</Link>
       <Link to="#links" className={linkClasses()}>Links</Link>
-      <Link to="#forms" className={linkClasses()}>Buttons</Link>
+      <Link to="#forms" className={linkClasses()}>Forms</Link>
       <Link to="#tables" className={linkClasses()}>Tables</Link>
       <Link to="#media" className={linkClasses()}>Media</Link>
       <Link to="#accordions" className={linkClasses()}>Accordions</Link>
