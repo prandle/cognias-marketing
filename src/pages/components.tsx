@@ -43,27 +43,27 @@ export default function ComponentsLibrary() {
 
       {/* React Components */}
       {/* Accordion */}
+      <h2 id="accordions" className="text-primary scroll-mt-24">Accordion</h2>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
-        <h2 id="accordions" className="text-primary scroll-mt-24">Accordion</h2>
         <SampleAccordion/>
       </FullWidthBand>
 
       {/* Get Satered */}
+      <h2 id="cta" className="text-primary scroll-mt-24">Main CTA</h2>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
-        <h2 id="cta" className="text-primary scroll-mt-24">Main CTA</h2>
         <GetStarted />
       </FullWidthBand>
 
       {/* Buttons */}
+      <h2 id="buttons" className="text-primary scroll-mt-24">Buttons</h2>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
-        <h2 id="buttons" className="text-primary scroll-mt-24">Buttons</h2>
         <SampleButtons/>
       </FullWidthBand>
 
 
       {/* Animation */}
+      <h2 id="animation" className="text-primary scroll-mt-24">Animation</h2>
       <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
-        <h2 id="animation" className="text-primary scroll-mt-24">Animation</h2>
         <HeroAnimation/>
       </FullWidthBand>
 
