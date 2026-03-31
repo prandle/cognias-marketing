@@ -22,9 +22,9 @@ export default function AboutPage() {
       <div className="relative overflow-hidden">
 
         {/* GLOBAL BACKGROUND GLOW */}
-        <div className="absolute inset-0 -z-10">
+        {/* <div className="absolute inset-0 -z-10">
           <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(255,77,0,0.08),transparent_70%)]" />
-        </div>
+        </div> */}
 
         {/* HERO */}
         <SectionBand size="lg">
