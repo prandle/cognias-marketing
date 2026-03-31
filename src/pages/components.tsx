@@ -19,7 +19,7 @@ export default function ComponentsLibrary() {
     </nav>
     </div>
     {/* Toggle */}
-    <div className="max-w-6xl mx-auto flex overflow-x-auto no-scrollbar whitespace-nowrap items-center gap-3 shrink-0">
+    <div className="max-w-6xl mx-auto flex overflow-x-auto no-scrollbar whitespace-nowrap items-center gap-3 shrink-0 px-4 py-3">
       <span className="text-sm">Light</span>
 
       <button
