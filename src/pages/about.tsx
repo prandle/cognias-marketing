@@ -67,7 +67,7 @@ export default function AboutPage() {
         </SectionBand>
 
         {/* HOW IT WORKS (muted band) */}
-        <SectionBand variant="muted" size="md">
+        <SectionBand variant="accent" size="md">
           <div className="space-y-10">
             <h2 className="text-2xl font-semibold text-text text-center">
               How Cognias works
