@@ -22,8 +22,8 @@ const variants = {
   accent: `
     relative overflow-hidden
     bg-gradient-to-br 
-    from-primary/10 
-    via-primary/5 
+    from-primary/30 
+    via-primary/15 
     to-transparent
   `,
 };
