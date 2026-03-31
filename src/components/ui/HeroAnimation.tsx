@@ -3,6 +3,7 @@
 export const HeroAnimation = () => {
   return (
     <div className="
+      relative 
       hero-animation
       bg-[url('/abstract_2.jpg')]
       bg-cover
@@ -15,6 +16,7 @@ export const HeroAnimation = () => {
         width="100%"
         height="420"
         xmlns="http://www.w3.org/2000/svg"
+        className="z-0"
       >
         <defs>
           <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
@@ -146,7 +148,7 @@ export const HeroAnimation = () => {
           </circle>
         </g>
       </svg>
-      <div className="absolute inset-0 bg-white/85" />
+      <div className="absolute inset-0 bg-white/85 z-10" />
     </div>
   );
 };
