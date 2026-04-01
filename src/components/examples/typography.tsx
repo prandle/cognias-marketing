@@ -21,7 +21,7 @@ export default function SampleButtons() {
                 <li>Ordered list item 2</li>
                 <li>Ordered list item 3</li>
             </ol>
-            <code><h1>Hello World</h1></code>
+            <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
 
         </>
     );
