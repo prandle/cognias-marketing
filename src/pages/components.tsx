@@ -1,7 +1,7 @@
 import { FullWidthBand, Container } from "../components/layout";
 import { ComponentsNav, HeroAnimation, Quotation } from "../components/ui";
 import { GetStarted } from "../components/widgets";
-import { SampleButtons, SampleAccordion } from "../components/examples";
+import { SampleButtons, SampleAccordion, SampleTypography } from "../components/examples";
 import { useState } from "react";
 
 
@@ -40,6 +40,13 @@ export default function ComponentsLibrary() {
     </div>
   
 </div>
+
+      {/* Typography */}
+      <Container><h2 id="typography" className="text-primary scroll-mt-24">Typography</h2></Container>
+      <FullWidthBand variant={isPrimaryBg ? "primary" : "subtle"}>
+        <SampleTypography/>
+      </FullWidthBand>
+
 
       {/* React Components */}
       {/* Accordion */}
