@@ -43,7 +43,7 @@ return (
       </SectionBand>
 
       {/* FEATURES */}
-      <SectionBand size="md">
+      <SectionBand variant="accent" size="md">
         <div className="grid gap-6 md:grid-cols-3">
 
           {[
@@ -84,7 +84,7 @@ return (
       </SectionBand>
 
       {/* VISUAL / ANIMATION */}
-      <SectionBand variant="accent" size="md">
+      <SectionBand size="md">
         <div className="max-w-4xl mx-auto">
           <HeroAnimation />
         </div>
