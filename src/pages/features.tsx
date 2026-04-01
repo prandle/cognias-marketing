@@ -1,4 +1,5 @@
-import { SEO, Button } from "../components/ui/index";
+import { SEO } from "../components/ui";
+import { GetStarted } from "../components/widgets";
 import {
   Database,
   Layers,
@@ -65,9 +66,9 @@ export default function FeaturesPage() {
                 className="bg-surface border border-border rounded-[var(--radius-lg)] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition"
               >
                 {feature.icon}
-                <h3 className="text-lg font-semibold text-text mb-2">
+                <h4 className="text-lg font-semibold text-text mb-2">
                   {feature.title}
-                </h3>
+                </h4>
                 <p className="text-sm text-muted">{feature.desc}</p>
               </div>
             ))}
@@ -110,9 +111,9 @@ export default function FeaturesPage() {
                 className="bg-surface border border-border rounded-[var(--radius-lg)] p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition"
               >
                 {feature.icon}
-                <h3 className="text-md font-semibold text-text mb-2">
+                <h4 className="text-md font-semibold text-text mb-2">
                   {feature.title}
-                </h3>
+                </h4>
                 <p className="text-sm text-muted">{feature.desc}</p>
               </div>
             ))}
@@ -156,9 +157,9 @@ export default function FeaturesPage() {
                 className="bg-background border border-border rounded-[var(--radius-lg)] p-6"
               >
                 {feature.icon}
-                <h3 className="text-md font-semibold text-text mb-2">
+                <h4 className="text-md font-semibold text-text mb-2">
                   {feature.title}
-                </h3>
+                </h4>
                 <p className="text-sm text-muted">{feature.desc}</p>
               </div>
             ))}
@@ -199,20 +200,8 @@ export default function FeaturesPage() {
         {/* ========================================= */}
         {/* CTA */}
         {/* ========================================= */}
-        <section className="text-center space-y-4">
-          <h2 className="text-2xl font-semibold text-text">
-            Ready to build with Cognias?
-          </h2>
-
-          <p className="text-muted">
-            Launch your first AI assistant in minutes.
-          </p>
-
-          <a href="https://app.cognias.io">
-            <Button className="px-6 py-3">
-              Get Started
-            </Button>
-          </a>
+        <section>
+          <GetStarted />
         </section>
 
       </div>

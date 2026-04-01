@@ -106,7 +106,7 @@ return (
 
                 {item.icon}
 
-                <h3>{item.title}</h3>
+                <h4>{item.title}</h4>
                 <p className="text-sm opacity-80">{item.desc}</p>
               </div>
             ))}
