@@ -16,12 +16,30 @@
   font-weight: 800;
 }
 
-/* Scale */
-h1 { font-size: 3rem; }   /* ~40px */
-h2 { font-size: 2.5rem; }     /* ~32px */
-h3 { font-size: 1.5rem; }   /* ~24px */
-h4 { font-size: 1.25rem; }  /* ~20px */
-h5 { font-size: 1.125rem; } /* ~18px */
+/* =========================================
+  Scale
+========================================= */
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+}
+h3 {
+  font-size: clamp(1.4rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+}
+h4 {
+  font-size: clamp(1.2rem, 1.8vw, 1.25rem);
+  font-weight: 600;
+}
+h5 {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 600;
+}
 
 /* Paragraphs */
 p {
@@ -53,6 +71,79 @@ ul, ol {
 
 li {
   margin: 0.25rem 0;
+}
+
+/* =========================================
+  Spacing
+========================================= */
+p {
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+:where(.flow > * + *) {
+  margin-top: 1rem;
+}
+
+:where(h1, h2, h3) + * {
+  margin-top: 0.75rem;
+}
+
+:where(p + p) {
+  margin-top: 1rem;
+}
+
+:where(.flow-lg > * + *) {
+  margin-top: 1.5rem;
+}
+
+:where(.flow-sm > * + *) {
+  margin-top: 0.75rem;
+}
+/* =========================================
+  Bullets
+========================================= */
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-top: 0.25rem;
+}
+
+/* =========================================
+  Code block
+========================================= */
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875em;
+  background: rgba(var(--border), 0.4);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  background: #0f172a; /* nice dark */
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
 }
 
 /* =========================================
