@@ -34,7 +34,7 @@ export function Footer({ version }: FooterProps) {
                 />
               )}
               {(config.cmpName || config.cmpCopyright) && (
-                <p>
+                <p className="mb-0">
                   © {year} {config.cmpName && `${config.cmpName}.`}{" "}
                   All Rights Reserved.
                 </p>
