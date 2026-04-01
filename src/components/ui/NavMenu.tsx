@@ -63,7 +63,7 @@ export default function Navbar() {
 
         {/* ✅ Desktop menu */}
         <div className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-1 list-none p-0 m-0">
             <li>
               <Link to="/features" className={linkClasses()}>
                 Features
