@@ -93,7 +93,11 @@ h1, h2, h3 {
 }
 
 :where(h1, h2, h3) + * {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+:where(h4, h5, h6) + * {
+  margin-top: 1rem;
 }
 
 :where(p + p) {
