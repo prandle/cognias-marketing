@@ -30,17 +30,17 @@ export function GetStarted(props: CTAProps) {
         themeInverse ? "theme-inverse" : ""
       }`}
     >
-      <h2
-        className={`text-2xl font-semibold ${
+      <h1
+        className={`${
           themeInverse ? "text-white/80" : "text-text"
         }`}
       >
         {title}
-      </h2>
+      </h1>
 
-      <p className={`${themeInverse ? "text-white/60" : "text-muted"}`}>
+      <h4 className={`${themeInverse ? "text-white/60" : "text-muted"}`}>
         {subtitle}
-      </p>
+      </h4>
 
       <a href={ctaUrl}>
         <Button
