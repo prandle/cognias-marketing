@@ -1,0 +1,147 @@
+@layer base {
+/* Tailwind has 3 layers: base → components → utilities */
+/* =========================================
+   BASE TYPOGRAPHY
+========================================= */
+
+:where(h1, h2, h3, h4, h5, h6) {
+  color: rgb(var(--text));
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Scale */
+h1 { font-size: 2.5rem; }   /* ~40px */
+h2 { font-size: 2rem; }     /* ~32px */
+h3 { font-size: 1.5rem; }   /* ~24px */
+h4 { font-size: 1.25rem; }  /* ~20px */
+h5 { font-size: 1.125rem; } /* ~18px */
+
+/* Paragraphs */
+p {
+  color: rgb(var(--text));
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Muted text helper */
+small {
+  color: rgb(var(--text-muted));
+}
+
+/* Links */
+a {
+  color: rgb(var(--primary));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.25rem;
+  color: rgb(var(--text));
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+/* =========================================
+  Prose (Article typography)
+========================================= */
+.prose {
+  max-width: 65ch;
+}
+
+.prose p {
+  margin: 1rem 0;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+}
+
+.prose ul {
+  margin: 1rem 0;
+}
+
+/* =========================================
+   BLOCKQUOTE
+========================================= */
+
+blockquote {
+  border-left: 3px solid rgba(var(--border));
+  padding-left: 1rem;
+  color: rgb(var(--text-muted));
+  font-style: italic;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  color: rgb(var(--text));
+  border-bottom: 1px solid rgba(var(--border));
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(var(--border));
+  color: rgb(var(--text-muted));
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid rgba(var(--border));
+  background: transparent;
+  color: rgb(var(--text));
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(var(--text-muted));
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: rgb(var(--primary));
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+}
+
+/* =========================================
+   HR
+========================================= */
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(var(--border));
+  margin: 2rem 0;
+}
+
+}

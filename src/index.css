@@ -1,9 +1,13 @@
 @import "tailwindcss";
+/* 1. TOKENS (foundation) */
 @import "./styles/tokens.css";
+/* 2. BASE (typography) */
+@import "./styles/base.css";
+/* 3. COMPONENTS */
 @import "./styles/components.css";
+/* 4. THEMES */
 @import "./styles/themes.css";
 @import "./styles/dark.css";
-
 
 @layer utilities {
 /* backgrounds */
