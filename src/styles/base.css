@@ -21,15 +21,18 @@ font-family: var(--font-title);
   font-style: normal;
 }
 
-:where(h1, h2, h3) {
+:where(h2, h3, h4) {
 font-family: var(--font-heading);
   font-weight: 600;
   font-style: normal;
 }
-:where(html, body, p) {
+:where(html, body, p, h5, h6) {
   font-family: var(--font-body);
   font-weight: 400;
   font-style: normal;
+}
+:where(h5, h6) {
+  font-weight: 600;
 }
 
 /* =========================================
