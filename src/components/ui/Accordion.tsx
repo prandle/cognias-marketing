@@ -179,7 +179,7 @@ function AccordionTrigger({
         "focus:outline-none focus:ring-2 focus:ring-[var(--focus-ring)]"
       )}
     >
-      <div className="flex items-center">{children}</div>
+      <div className="flex items-center"><h5>{children}</h5></div>
 
       <ChevronDown
         size={18}
