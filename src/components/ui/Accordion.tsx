@@ -172,7 +172,7 @@ function AccordionTrigger({
       aria-controls={`content-${itemId}`}
       id={`trigger-${itemId}`}
       className={clsx(
-        "w-full flex items-center justify-between px-4 py-3 text-left font-medium transition",
+        "w-full flex items-center justify-between px-6 py-4 text-left font-lg transition",
         themeInverse
           ? "bg-white/5 hover:bg-white/10 text-white"
           : "bg-surface hover:bg-muted text-[var(--text)]",
@@ -217,13 +217,13 @@ function AccordionContent({
       role="region"
       aria-labelledby={`trigger-${itemId}`}
       className={clsx(
-        "px-4 overflow-hidden transition-all duration-300",
+        "px-6 overflow-hidden transition-all duration-300",
         isOpen ? "max-h-96 py-3" : "max-h-0"
       )}
     >
       <div
         className={clsx(
-          "text-sm",
+          "text-md",
           themeInverse ? "text-white/80" : "text-muted"
         )}
       >
