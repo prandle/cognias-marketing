@@ -3,10 +3,10 @@
 /* =========================================================
 0. Fonts
 ========================================================= */
-   --font-body: "Roboto", sans-serif, Helvetica;
-   --font-heading: "Alfa Slab One", serif;
-   --font-title: "Fredericka the Great";
-   --font-icon: "Open Sans";
+   --font-title: "Noto Sans Display";
+   --font-heading: "Noto Sans";
+   --font-body: "Noto Sans";
+   /* --font-icon: "Open Sans"; */
 
 /* =========================================================
 1. PRIMITIVES (RAW VALUES — NEVER USE DIRECTLY IN COMPONENTS)
