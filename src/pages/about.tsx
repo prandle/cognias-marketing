@@ -29,7 +29,7 @@ return (
           </h1>
 
           <p className="max-w-2xl mx-auto">
-            Cognias helps build AI assistants that operate within real
+            Cognias helps teams build AI assistants that operate within real
             workflows — not just chat, but structured systems that deliver
             consistent, reliable outcomes.
           </p>
